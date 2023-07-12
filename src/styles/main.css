@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #F9E0BB;
+}
+
+img {
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #FFC26F;
+  color: #884A39;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+ * Header
+ *
+ */
+
+ .header {
+  display: block;
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+
+.header__inner {
+  position: fixed;
+  top: 0;
+  background-color: #C38154;
+  width: 100%;
+  text-align: right;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin: 0.25em 0.5em;
+  display: inline-block;
+  color: #F5F5F5;
+}
+
+/*
+ * Top level navigation
+ */
+
+/* Nav mobile */
+
+.nav-toggle-label {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+}
+
+.nav-toggle-label span:before,
+.nav-toggle-label span:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.nav-toggle-label span:before {
+  top: -10px;
+}
+
+.nav-toggle-label span:after {
+  bottom: -10px;
+}
+
+.nav {
+  background-color: #C38154;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  transform: translateX(-100%);
+  z-index: 999;
+}
+
+.nav-list {
+  list-style-type: none;
+  font-size: 1.4em;
+  margin: 2em;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-bottom: 10px;
+}
+
+.nav-list li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-open {
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+/* End */
+.navbar-desktop {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*
+ * Jumbotron
+ */
+
+ .hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_4.jpg");
+  background-position: bottom;
+  object-fit: fill;
+}
+
+.hero__inner {
+  margin: 0em auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #F5F5F5;
+  font-weight: 500;
+  font-size: 36px;
+  padding-top: 3em;
+}
+
+.hero__tagline {
+  color: #F5F5F5;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/*
+ * latest
+ */
+
+.latest {
+  width: 100%;
+  margin: 60px auto;
+  text-align: center;
+  padding: 0 1.5em;
+}
+
+.latest__label {
+  font-size: 32px;
+  font-weight: lighter;
+  color: #884A39;
+}
+
+.latest__label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #884A39;
+}
+
+/*
+ * post
+ */
+
+.posts {
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+/*
+ * post item
+ */
+
+.post-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #FFC26F;
+}
+
+.post-item__content {
+  padding: 16px 32px 32px 32px;
+}
+
+.post-item__thumbnail {
+  width: 100%;
+}
+
+.post-item__city {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #884A39;
+}
+
+.post-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+  opacity: 0.5;
+}
+
+.post-item__title a {
+  text-decoration: none;
+  color: #884A39;
+}
+
+.post-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #884A39;
+  text-align: justify;
+}
+
+.post-cta {
+  display: block;
+  width: 100px;
+}
+
+.detail-button {
+  margin: 1rem auto;
+  padding: 5px 10px;
+  background-color: #C38154;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detail-button:hover {
+  background-color: #884A39;
+}
+
+/*
+ * footer
+ */
+
+ footer {
+  background-color: #C38154;
+  padding: 1.2em;
+  width: 100%;
+  text-align: center;
+}
+
+footer .copyright {
+  color: white;
+}
