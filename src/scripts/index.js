@@ -1,6 +1,21 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import './script';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-console.log('Hello Coders! :)');
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#mainContent'),
+  listMenu: document.querySelectorAll('.nav-list li a'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+});

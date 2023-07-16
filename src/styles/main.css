@@ -62,6 +62,14 @@ img {
  */
 
 /* Nav mobile */
+ 
+.nav-toggle-label button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
 
 .nav-toggle-label {
   display: block;
@@ -73,37 +81,6 @@ img {
   cursor: pointer;
 }
 
-.nav-toggle-label span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  transition: background-color 0.3s;
-}
-
-.nav-toggle-label span:before,
-.nav-toggle-label span:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  position: absolute;
-  transition: transform 0.3s;
-}
-
-.nav-toggle-label span:before {
-  top: -10px;
-}
-
-.nav-toggle-label span:after {
-  bottom: -10px;
-}
-
 .nav {
   background-color: #C38154;
   position: fixed;
@@ -112,6 +89,7 @@ img {
   width: 70%;
   height: 100%;
   transform: translateX(-100%);
+  transition: all 0.3s;
   z-index: 999;
 }
 
@@ -263,6 +241,11 @@ main {
   line-height: 1.5em;
   color: #884A39;
   text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  white-space: pre-wrap;
 }
 
 .post-cta {
@@ -270,10 +253,9 @@ main {
   width: 100px;
 }
 
-.detail-button {
+.favorite-button {
   margin: 1rem auto;
-  padding: 5px 10px;
-  background-color: #C38154;
+  padding: 14px 25px;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -283,9 +265,52 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.detail-button:hover {
+.favorite-button__like {
+  background-color: #C38154;
+}
+
+.favorite-button__liked {
+  background-color: #ff4444;
+}
+
+.favorite-button__like:hover {
   background-color: #884A39;
 }
+
+.favorite-button__liked:hover {
+  background-color: #CC0000;
+}
+
+/* Detail */
+
+.resto-detail {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.resto-detail .resto-detail__title {
+  margin-top: 1em;
+  font-size: 28px;
+}
+ 
+.resto-detail .resto-detail__poster {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.resto-detail .resto-detail__info h3 {
+  margin: 0.5em 0;
+}
+
+.resto-detail .resto-detail__info h4 {
+  margin-top: 1em;
+}
+ 
 
 /*
  * footer
