@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -34,6 +35,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
+    new BundleAnalyzerPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -48,6 +50,18 @@ module.exports = {
           quality: 50,
           progressive: true,
         }),
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/**'],
+          },
+        },
       ],
     }),
   ],
