@@ -51,6 +51,29 @@
     color: #884A39;
   }
 
+  .hero {
+    height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+  }
+
+  .hero-content {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+
   .posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
