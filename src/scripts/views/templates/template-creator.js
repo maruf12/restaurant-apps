@@ -41,17 +41,17 @@ const createRestoListTemplate = (item) => `
   </article>
 `;
 
-const createLikeButtonTemplate = () => `
-  <button id="likeButton" class="favorite-button favorite-button__like">Tambahkan Favorit</button>
+const createFavoriteRestoButtonTemplate = () => `
+  <button id="likeButton" class="favorite-button favorite-button__like" aria-label="like this resto">Tambahkan Favorit</button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button id="likeButton" class="favorite-button favorite-button__liked">Hapus Favorit</button>
+const createUnfavoriteRestoButtonTemplate = () => `
+  <button id="likeButton" class="favorite-button favorite-button__liked" aria-label="unlike this resto">Hapus Favorit</button>
 `;
 
 export {
   createRestoListTemplate,
   createRestoDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createFavoriteRestoButtonTemplate,
+  createUnfavoriteRestoButtonTemplate,
 };
