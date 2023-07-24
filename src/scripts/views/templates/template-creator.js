@@ -49,7 +49,20 @@ const createUnfavoriteRestoButtonTemplate = () => `
   <button id="likeButton" class="favorite-button favorite-button__liked" aria-label="unlike this resto">Hapus Favorit</button>
 `;
 
+const favoriteEmptyTemplate = () => `
+  <div class="resto-favorite__not-found">
+    <h2 class="resto-detail__title">Tidak ada resto favorite</h2>
+  </div>
+`;
+
+// const favoriteEmptyTemplate = () => `
+//   <div class="latest">
+//     <h2 class="latest-label">Tidak ada resto favorite</h2>
+//   </div>
+// `;
+
 export {
+  favoriteEmptyTemplate,
   createRestoListTemplate,
   createRestoDetailTemplate,
   createFavoriteRestoButtonTemplate,
