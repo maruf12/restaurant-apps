@@ -34,9 +34,9 @@ const createRestoListTemplate = (item) => `
     <p class="post-item__city">${item.city}</p>
     <h1 class="post-item__title"><a href="/#/detail/${item.id}">${item.name}</a></h1>
     <p class="post-item__description">${item.description}</p>
-    <a href="/#/detail/${item.id}">
-      <button class="favorite-button favorite-button__like">Detail</button>
-    </a>
+    <button class="favorite-button favorite-button__like" onclick="location.href='/#/detail/${item.id}'">
+      Detail
+    </button>
   </div>
   </article>
 `;
@@ -54,12 +54,6 @@ const favoriteEmptyTemplate = () => `
     <h2 class="resto-detail__title">Tidak ada resto favorite</h2>
   </div>
 `;
-
-// const favoriteEmptyTemplate = () => `
-//   <div class="latest">
-//     <h2 class="latest-label">Tidak ada resto favorite</h2>
-//   </div>
-// `;
 
 export {
   favoriteEmptyTemplate,
