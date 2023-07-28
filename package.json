@@ -10,7 +10,8 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "build-image": "node sharp.js",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "serve": "http-server dist"
   },
   "keywords": [],
   "author": "Ma'ruf Harsono <maruf.harsono@gmail.com>",
@@ -26,6 +27,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
@@ -44,11 +46,13 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
-    "whatwg-fetch": "^3.6.2"
+    "whatwg-fetch": "^3.6.2",
+    "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
     "idb": "^7.1.1",
     "lazysizes": "^5.3.2",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "workbox-window": "^7.0.0"
   }
 }

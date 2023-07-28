@@ -68,15 +68,15 @@ img {
 .nav-toggle-label button {
   background-color: transparent;
   border: none;
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
   color: white;
+  min-width: 48px;
+  min-height: 48px;
 }
 
 .nav-toggle-label {
-  display: block;
-  min-width: 44px;
-  min-height: 44px;
+  display: inline-block;
   position: fixed;
   top: 10px;
   left: 20px;
